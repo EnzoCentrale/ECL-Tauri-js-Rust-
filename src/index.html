@@ -9,10 +9,9 @@
 
   <body>
     <div class="container">
-      <h1 class="title">ECL + WIFI CONNECTOR</h1>
       <p class="subtitle">Fill the form and press submit</p>
 
-      <form name="Credentials" onsubmit="Call_rust(); return false">
+      <form name="Credentials" onsubmit="Call_rust();return false">
         <label for="username-input" class="form-label">username</label>
         <input
           type="text"
@@ -45,7 +44,7 @@
       </p>
 
       <div class="bottom-section">
-        <button class="submit-btn secondary" onclick="Stop_rust();return false">stop the program</button>
+        <button id="stopper" class="submit-btn secondary" onclick="Stop_rust();return false">Program not runnning</button>
         <div id="red-dot"></div>
       </div>
     </div>

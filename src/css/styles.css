@@ -4,12 +4,6 @@
 }
 
 
-body{
-  background-color: #ffffff;
-}
-
-
-
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -23,8 +17,8 @@ body{
 /* styles.css */
 
 body {
-  background-color: #000;
-  color: #fff;
+  background-color: #363333;
+  color: #a99999;
   font-family: 'Inter', sans-serif;
   display: flex;
   justify-content: center;
@@ -35,7 +29,7 @@ body {
 
 .container {
   text-align: center;
-  max-width: 400px;
+  max-width: 400%;
 }
 
 .title {
