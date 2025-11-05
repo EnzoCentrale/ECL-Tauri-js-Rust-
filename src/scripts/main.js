@@ -8,14 +8,20 @@ async function Call_rust() {
   await window.__TAURI__.core.invoke("listen_for_cmd_r_and_write", { user: user , pass : pass });
   alert("Macro is on , Do CMD+R when on ECL+ Page")
   console.log("this is working 2");
+
+
+  //IMMA CLEAr this form
+  document.forms["Credentials"]["username"].value = "";
+  document.forms["Credentials"]["username"].value = "";
+
 };
 
-function Test(){
-  alert("yess");
-  console.log("yes")
+async function Stop_rust() {
+  await window.__TAURI__.core.invoke("stop_listening")
+  console.log("rust was stopped")
 }
 
 
-window.Test = Test;
 window.Call_rust = Call_rust;
+window.Stop_rust = Stop_rust;
 

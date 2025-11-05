@@ -5,7 +5,6 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/global.css"/>
     <script type="module" src="scripts/main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maybe Not</title>
@@ -38,6 +37,11 @@
 
         <input type="submit" name="submit">
       </form>
+
+      <button name="stop" onclick="Stop_rust() ; return false">Stop listening</button>
+      <p>Program is running</p>
+      <div id="light"></div>
+      
   </body>
   
 </html>
