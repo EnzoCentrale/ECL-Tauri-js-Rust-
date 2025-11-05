@@ -4,6 +4,11 @@
 }
 
 
+body{
+  background-color: #ffffff;
+}
+
+
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -12,14 +17,111 @@
   font-weight: 400px;
 
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
 
-.light{
-  display: inline-block;
-  height: 12px;
-  width: 12px;
-  color: #ff0000;
-  vertical-align: middle;
+/* styles.css */
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  max-width: 400px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+.form-label {
+  display: block;
+  text-align: left;
+  font-size: 0.9rem;
+  color: #bbb;
+  margin: 1rem 0 0.3rem 0.4rem;
+}
+
+.username-field,
+.password-field {
+  width: 100%;
+  background-color: #1c1c1c;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 0.8rem;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.username-field::placeholder,
+.password-field::placeholder {
+  color: #777;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: #333;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 0.8rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #444;
+}
+
+.instructions {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 2rem 0 1rem;
+}
+
+.bottom-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.secondary {
+  background-color: #222;
+  color: #999;
+}
+
+#red-dot {
+  margin-top: 24px;
+  width: 32px;
+  height: 32px;
+  background-color: #d22;
+  border-radius: 20%;
+}
+
+
+#liltext{
+  font-size: 10px;
+  opacity: 85%;
 }

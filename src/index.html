@@ -1,47 +1,54 @@
 <!doctype html>
 <html lang="en">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/styles.css" />
-    <script type="module" src="scripts/main.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Maybe Not</title>
+    <title>ECL + WIFI CONNECTOR</title>
   </head>
 
   <body>
+    <div class="container">
+      <h1 class="title">ECL + WIFI CONNECTOR</h1>
+      <p class="subtitle">Fill the form and press submit</p>
 
-    <form name="Credentials" onsubmit="Call_rust(); return false">
+      <form name="Credentials" onsubmit="Call_rust(); return false">
+        <label for="username-input" class="form-label">username</label>
         <input
           type="text"
           id="username-input"
           name="username"
           class="username-field"
-          placeholder="Username"
+          placeholder="ex : someone"
           aria-label="Username"
           autocomplete="username"
           required
-        /> <br>
+        /><br>
 
+        <label for="password-input" class="form-label">Password</label>
         <input
           type="password"
           id="password-input"
           name="password"
           class="password-field"
-          placeholder="Password"
+          placeholder="ex : 123456789"
           aria-label="Password"
           autocomplete="password"
           required
         /><br>
 
-        <input type="submit" name="submit" ><span class="light"></span>
+        <input type="submit" name="submit" value="Submit" class="submit-btn" />
       </form>
 
-      <button name="stop" onclick="Stop_rust() ; return false">Stop listening</button>
-  
-      
-  </body>
-  
-</html>
+      <p class="instructions">
+        To run the automation press cmd+R when on ECL page
+      </p>
 
+      <div class="bottom-section">
+        <button class="submit-btn secondary" onclick="Stop_rust();return false">stop the program</button>
+        <div id="red-dot"></div>
+      </div>
+    </div>
+    <script type="module" src="scripts/main.js"></script>
+  </body>
+</html>
