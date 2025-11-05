@@ -7,12 +7,13 @@ async function Call_rust() {
   var user = String(document.forms["Credentials"]["username"].value);
   var pass = String(document.forms["Credentials"]["password"].value);
   alert("this is working 1");
-  await invoke("listen_for_cmd_r_and_write", { name: user , pass : pass });
+  await invoke("listen_for_cmd_r_and_write", { user: user , pass : pass });
   alert("this is working 2");
 };
 
 function Test(){
   alert("yess")
+  print("tesing")
 }
 
 /*window.addEventListener("DOMContentLoaded", () => {
@@ -23,4 +24,6 @@ function Test(){
   });
 });*/
 
+window.Test = Test;
+window.Call_rust = Call_rust;
 
