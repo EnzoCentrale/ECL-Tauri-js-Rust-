@@ -11,8 +11,8 @@
     "windows": [
       {
         "title": "ecl+",
-        "width": 400,
-        "height": 500,
+        "width": 450,
+        "height": 150,
         "decorations": true,
         "skipTaskbar": true
       }
