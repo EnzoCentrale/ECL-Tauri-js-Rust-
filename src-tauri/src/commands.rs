@@ -18,15 +18,14 @@ pub fn write_pass(user : &str,pass : &str){
 
 #[tauri::command]
 pub fn listen_for_cmd_r_and_write(user: &str, pass: &str) {
-    println!("<user> <pass>");
     use std::sync::{Arc, Mutex};
-    let meta_down = Arc::new(Mutex::new(false));
-    let meta_down_cb = meta_down.clone();
 
     let user = user.to_string();
     let pass = pass.to_string();
 
     println!("Starting key event listener. Waiting for Cmd+M key combination...");
+    let meta_down = Arc::new(Mutex::new(false));
+    let meta_down_cb = meta_down.clone();
 
     let callback = move |event: Event| {
         match event.event_type {
@@ -56,3 +55,4 @@ pub fn listen_for_cmd_r_and_write(user: &str, pass: &str) {
         eprintln!("Error: {:?}", error);
     }
 }
+
