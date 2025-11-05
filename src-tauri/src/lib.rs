@@ -6,7 +6,10 @@ mod commands;
 pub fn run() {
     tauri::Builder::default()
         .plugin(tauri_plugin_opener::init())
-        .invoke_handler(tauri::generate_handler![commands::listen_for_cmd_r_and_write])
+        .invoke_handler(tauri::generate_handler![
+            commands::listen_for_cmd_r_and_write,
+            commands::stop_listener
+            ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

@@ -875,6 +875,7 @@ name = "ecl"
 version = "0.1.0"
 dependencies = [
  "enigo",
+ "lazy_static",
  "rdev",
  "serde",
  "serde_json",
