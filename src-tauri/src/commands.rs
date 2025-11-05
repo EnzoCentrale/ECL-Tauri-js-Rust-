@@ -2,7 +2,7 @@ use enigo::{
     Direction::Click,
     Enigo, Key, Keyboard, Settings,
 };
-use global_hotkey::{hotkey::{Code, HotKey, Modifiers}, GlobalHotKeyEvent, GlobalHotKeyManager};
+use global_hotkey::{hotkey::{Code, HotKey, Modifiers}, GlobalHotKeyEvent, GlobalHotKeyManager, HotKeyState};
 use std::sync::{Arc, Mutex, OnceLock};
 use std::time::Duration;
 
@@ -87,18 +87,23 @@ pub fn listen_for_cmd_r_and_write(user: String, pass: String) {
                         
                         loop {
                             if let Ok(event) = receiver.recv() {
-                                println!("Hotkey triggered! Event: {:?}", event);
-                                
-                                // Get credentials and trigger autofill
-                                if let Ok(creds) = get_credentials().lock() {
-                                    let user = creds.0.clone();
-                                    let pass = creds.1.clone();
+                                // Only trigger on key press, not release
+                                if event.state == HotKeyState::Pressed {
+                                    println!("Hotkey pressed! Event: {:?}", event);
                                     
-                                    if !user.is_empty() && !pass.is_empty() {
-                                        std::thread::spawn(move || {
-                                            write_pass(&user, &pass);
-                                        });
+                                    // Get credentials and trigger autofill
+                                    if let Ok(creds) = get_credentials().lock() {
+                                        let user = creds.0.clone();
+                                        let pass = creds.1.clone();
+                                        
+                                        if !user.is_empty() && !pass.is_empty() {
+                                            std::thread::spawn(move || {
+                                                write_pass(&user, &pass);
+                                            });
+                                        }
                                     }
+                                } else {
+                                    println!("Hotkey released, ignoring.");
                                 }
                             }
                         }
