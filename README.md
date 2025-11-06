@@ -12,4 +12,4 @@ submit your credentials and press CMD/Windows + R on the ecl wifi page to autoco
 
 
 Download this to install app:
-ecl+_1.0.0_aarch64.dmg
+[install here](https://github.com/EnzoCentrale/ECL-Tauri-js-Rust-/blob/main/ecl%2B_1.0.0_aarch64.dmg)
