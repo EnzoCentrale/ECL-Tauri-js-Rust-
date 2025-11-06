@@ -21,7 +21,9 @@ Side project for Centrale Lyon students. I got tired of manually entering the pa
 
 It's a simple menu bar application that automates the WiFi login process. Just press CMD/Windows + R on the login page and it fills everything in for you.
 
-Principally made for MacOs but There us also Windows support(didn't test it much), no idea if it works for Linux i didn't go that deep into programming yet.
+Principally made for MacOs.
+I gotta build it on a Windows machine to get you guys a easy download link should work? 
+no idea if it works for Linux i didn't go that deep into programming yet, tell me if it works.
 
 **Security note**: Username/passwords are saved locally on your machine, no connection whatsoever to a server for security reasons.
 
