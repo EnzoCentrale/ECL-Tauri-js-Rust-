@@ -11,5 +11,5 @@ give the app accessibility permission (for autofill)
 submit your credentials and press CMD/Windows + R on the ecl wifi page to autoconnect 
 
 
-
-
+Download this to install app:
+[[ecl+_1.0.0_aarch64.dmg]]
