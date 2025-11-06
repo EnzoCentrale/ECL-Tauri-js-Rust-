@@ -1,4 +1,4 @@
-
+// To anyone reading this , i kept this because of nostalgia and the pain it caused me to use rdev
 use enigo::{
     Direction::{Click},
     Enigo, Key, Keyboard, Settings,
