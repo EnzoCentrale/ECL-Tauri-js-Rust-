@@ -107,6 +107,18 @@ Not my fault
 ## ENERGY CONSUMPTION
 Iv've been running tests on my computer , over the span of 12 hours it has consumes <1% battery life , so nothing to worry about 
 
+## Python & ManimGL Support
+
+This repository now includes Python support with the ManimGL library for creating mathematical animations.
+
+**Setup:**
+1. Create a virtual environment: `python3 -m venv venv`
+2. Activate it: `source venv/bin/activate` (Unix/Mac) or `venv\Scripts\activate` (Windows)
+3. Install dependencies: `pip install -r requirements.txt`
+4. Run example: `manimgl examples/basic_example.py BasicScene`
+
+See [PYTHON_SETUP.md](PYTHON_SETUP.md) for detailed instructions.
+
 ---
 
 <div align="center">
