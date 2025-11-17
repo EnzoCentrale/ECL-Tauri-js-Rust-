@@ -1,0 +1,20 @@
+# Python dependencies for manimgl
+
+# ManimGL - Mathematical Animation Engine (OpenGL version)
+manimgl
+
+# Core dependencies (typically installed with manimgl)
+numpy
+scipy
+Pillow
+pydub
+pygments
+moderngl
+moderngl-window
+skia-python
+mapbox-earcut
+colour
+manimpango
+
+# Additional useful libraries for animations
+matplotlib
